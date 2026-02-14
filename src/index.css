@@ -48,6 +48,9 @@
     /* Custom cyber tokens */
     --cyber-glow: 330 100% 45%;
     --cyber-blue: 200 100% 50%;
+    --cyber-purple: 270 80% 60%;
+    --cyber-amber: 35 100% 55%;
+    --cyber-teal: 175 80% 45%;
     --glass-bg: 0 0% 100% / 0.04;
     --glass-border: 0 0% 100% / 0.08;
     --glass-hover: 0 0% 100% / 0.08;

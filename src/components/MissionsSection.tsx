@@ -6,16 +6,22 @@ const missions = [
     icon: Shield,
     title: "Gouvernance & ISO 27001",
     text: "Structuration du Système de Management de la Sécurité de l'Information (SMSI) selon la norme ISO 27001 pour établir un cadre de gouvernance robuste.",
+    color: "text-cyber-teal",
+    borderColor: "border-t-cyber-teal/50",
   },
   {
     icon: Network,
     title: "Architecture & Segmentation Réseau",
     text: "Refonte complète de l'architecture réseau avec segmentation par VLAN et mise en place de règles de pare-feu pour isoler les flux critiques.",
+    color: "text-cyber-blue",
+    borderColor: "border-t-cyber-blue/50",
   },
   {
     icon: Activity,
     title: "SIEM & Supervision",
     text: "Déploiement d'une solution SIEM (Wazuh) pour la détection des menaces et modernisation de la supervision (Centreon) alignée sur la nouvelle infrastructure.",
+    color: "text-cyber-purple",
+    borderColor: "border-t-cyber-purple/50",
   },
 ];
 
@@ -30,8 +36,8 @@ export const MissionsSection = () => (
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
         {missions.map((m, i) => (
-          <AnimatedCard key={m.title} delay={i * 0.1} className="glass-card-hover p-6 border-t-2 border-t-primary/50">
-            <m.icon className="w-8 h-8 text-primary mb-4" />
+          <AnimatedCard key={m.title} delay={i * 0.1} className={`glass-card-hover p-6 border-t-2 ${m.borderColor}`}>
+            <m.icon className={`w-8 h-8 ${m.color} mb-4`} />
             <h3 className="text-lg font-bold text-foreground mb-3">{m.title}</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">{m.text}</p>
           </AnimatedCard>

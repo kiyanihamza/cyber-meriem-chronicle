@@ -1,16 +1,17 @@
 import { AnimatedSection, AnimatedCard } from "./AnimatedSection";
-import { Activity, FlaskConical, Search, ArrowRightLeft, MonitorDot, RefreshCw, Server, BarChart3 } from "lucide-react";
+import { FlaskConical, Search, ArrowRightLeft, RefreshCw, Server, BarChart3 } from "lucide-react";
+import wazuhDashboard from "@/assets/wazuh-dashboard.png";
 
 const wazuhCards = [
-  { icon: FlaskConical, title: "Déploiement Lab", text: "Mise en place d'un environnement de test complet avant déploiement en production pour valider la configuration et les règles de détection." },
-  { icon: Search, title: "Analyse & Détection", text: "Configuration de règles de détection personnalisées pour identifier les comportements suspects et les incidents de sécurité." },
-  { icon: ArrowRightLeft, title: "Migration Production", text: "Planification de la migration vers l'environnement de production avec intégration progressive des sources de logs critiques." },
+  { icon: FlaskConical, title: "Déploiement Lab", text: "Mise en place d'un environnement de test complet avant déploiement en production pour valider la configuration et les règles de détection.", color: "text-cyber-purple" },
+  { icon: Search, title: "Analyse & Détection", text: "Configuration de règles de détection personnalisées pour identifier les comportements suspects et les incidents de sécurité.", color: "text-primary" },
+  { icon: ArrowRightLeft, title: "Migration Production", text: "Planification de la migration vers l'environnement de production avec intégration progressive des sources de logs critiques.", color: "text-cyber-amber" },
 ];
 
 const centreonCards = [
-  { icon: RefreshCw, title: "Réalignement Infrastructure", text: "Adaptation de la supervision à la nouvelle architecture segmentée." },
-  { icon: Server, title: "Mise à Jour Hosts", text: "Actualisation de l'inventaire des équipements surveillés." },
-  { icon: BarChart3, title: "Services Critiques", text: "Identification et monitoring des services essentiels au business. Configuration adaptée à la nouvelle segmentation réseau." },
+  { icon: RefreshCw, title: "Réalignement Infrastructure", text: "Adaptation de la supervision à la nouvelle architecture segmentée.", color: "text-cyber-teal" },
+  { icon: Server, title: "Mise à Jour Hosts", text: "Actualisation de l'inventaire des équipements surveillés.", color: "text-cyber-blue" },
+  { icon: BarChart3, title: "Services Critiques", text: "Identification et monitoring des services essentiels au business. Configuration adaptée à la nouvelle segmentation réseau.", color: "text-cyber-purple" },
 ];
 
 export const SIEMSection = () => (
@@ -19,7 +20,7 @@ export const SIEMSection = () => (
       {/* Wazuh */}
       <div className="mb-16">
         <div className="mb-10">
-          <span className="font-mono text-primary text-xs tracking-widest uppercase">05 //</span>
+          <span className="font-mono text-cyber-purple text-xs tracking-widest uppercase">05 //</span>
           <h2 className="text-3xl font-bold text-foreground mt-2">Déploiement SIEM (Wazuh)</h2>
           <p className="text-muted-foreground mt-2">Solution de détection et d'analyse des événements de sécurité</p>
         </div>
@@ -45,10 +46,19 @@ export const SIEMSection = () => (
           </pre>
         </AnimatedCard>
 
+        {/* Wazuh Dashboard Screenshot */}
+        <AnimatedCard delay={0.1} className="glass-card p-4 mb-6 border-cyber-purple/30 border">
+          <h3 className="text-sm font-mono text-cyber-purple mb-3 flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-cyber-purple animate-pulse-glow" />
+            Dashboard Wazuh – Détection de Vulnérabilités
+          </h3>
+          <img src={wazuhDashboard} alt="Dashboard Wazuh - Vulnerability Detection" className="w-full rounded-lg border border-border/50" />
+        </AnimatedCard>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {wazuhCards.map((c, i) => (
             <AnimatedCard key={c.title} delay={i * 0.1} className="glass-card-hover p-6">
-              <c.icon className="w-6 h-6 text-primary mb-3" />
+              <c.icon className={`w-6 h-6 ${c.color} mb-3`} />
               <h3 className="font-bold text-foreground mb-2">{c.title}</h3>
               <p className="text-sm text-muted-foreground">{c.text}</p>
             </AnimatedCard>
@@ -65,7 +75,7 @@ export const SIEMSection = () => (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {centreonCards.map((c, i) => (
             <AnimatedCard key={c.title} delay={i * 0.1} className="glass-card-hover p-6">
-              <c.icon className="w-6 h-6 text-cyber-blue mb-3" />
+              <c.icon className={`w-6 h-6 ${c.color} mb-3`} />
               <h3 className="font-bold text-foreground mb-2">{c.title}</h3>
               <p className="text-sm text-muted-foreground">{c.text}</p>
             </AnimatedCard>

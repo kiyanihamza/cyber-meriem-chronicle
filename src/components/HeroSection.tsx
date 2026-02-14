@@ -6,8 +6,8 @@ export const HeroSection = () => {
     <section id="hero" className="min-h-screen flex items-center relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 section-grid-bg opacity-30" />
-      <div className="absolute top-[-300px] right-[-200px] w-[600px] h-[600px] rounded-full bg-primary/5 blur-[120px] animate-pulse-glow" />
-      <div className="absolute bottom-[-200px] left-[-100px] w-[400px] h-[400px] rounded-full bg-cyber-blue/5 blur-[100px] animate-pulse-glow" style={{ animationDelay: "1.5s" }} />
+      <div className="absolute top-[-300px] right-[-200px] w-[600px] h-[600px] rounded-full bg-primary/8 blur-[120px] animate-pulse-glow" />
+      <div className="absolute bottom-[-200px] left-[-100px] w-[400px] h-[400px] rounded-full bg-cyber-blue/8 blur-[100px] animate-pulse-glow" style={{ animationDelay: "1.5s" }} />
 
       <div className="container mx-auto px-8 py-20 relative z-10 max-w-5xl">
         {/* Logos */}

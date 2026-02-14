@@ -23,7 +23,7 @@ export const ISOSection = () => (
   <AnimatedSection id="iso" className="py-24 relative">
     <div className="container mx-auto px-8 max-w-5xl">
       <div className="mb-12">
-        <span className="font-mono text-primary text-xs tracking-widest uppercase">03 //</span>
+        <span className="font-mono text-cyber-teal text-xs tracking-widest uppercase">03 //</span>
         <h2 className="text-3xl font-bold text-foreground mt-2">SMSI & ISO 27001</h2>
         <p className="text-muted-foreground mt-2">Structuration progressive du système de management de la sécurité</p>
       </div>
@@ -41,8 +41,8 @@ export const ISOSection = () => (
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
             >
-              <div className="relative z-10 w-11 h-11 rounded-full bg-secondary border-2 border-primary/40 flex items-center justify-center flex-shrink-0 group-hover:border-primary group-hover:bg-primary/10 transition-all">
-                <span className="font-mono text-xs text-primary font-bold">{phase.num}</span>
+              <div className="relative z-10 w-11 h-11 rounded-full bg-secondary border-2 border-cyber-teal/40 flex items-center justify-center flex-shrink-0 group-hover:border-cyber-teal group-hover:bg-cyber-teal/10 transition-all">
+                <span className="font-mono text-xs text-cyber-teal font-bold">{phase.num}</span>
               </div>
               <div className="glass-card-hover p-4 flex-1 mb-3">
                 <h4 className="font-bold text-foreground text-sm">Phase {phase.num} – {phase.title}</h4>
@@ -57,7 +57,7 @@ export const ISOSection = () => (
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
         {extras.map((e, i) => (
           <AnimatedCard key={e.title} delay={i * 0.1} className="glass-card-hover p-6">
-            <e.icon className="w-6 h-6 text-primary mb-3" />
+            <e.icon className="w-6 h-6 text-cyber-teal mb-3" />
             <h3 className="font-bold text-foreground mb-2">{e.title}</h3>
             <p className="text-sm text-muted-foreground">{e.text}</p>
           </AnimatedCard>
