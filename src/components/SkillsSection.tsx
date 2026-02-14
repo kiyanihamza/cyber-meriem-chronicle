@@ -58,7 +58,7 @@ export const SkillsSection = () => (
     <div className="absolute inset-0 section-grid-bg opacity-20" />
     <div className="container mx-auto px-8 max-w-5xl relative z-10">
       <div className="mb-12">
-        <span className="font-mono text-primary text-xs tracking-widest uppercase">08 //</span>
+        <span className="font-mono text-cyber-purple text-xs tracking-widest uppercase">08 //</span>
         <h2 className="text-3xl font-bold text-foreground mt-2">Développement des Compétences</h2>
         <p className="text-muted-foreground mt-2">Acquisition de compétences techniques et organisationnelles</p>
       </div>

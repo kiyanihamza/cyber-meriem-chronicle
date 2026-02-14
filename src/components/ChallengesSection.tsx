@@ -12,7 +12,7 @@ export const ChallengesSection = () => (
     <div className="absolute inset-0 section-grid-bg opacity-20" />
     <div className="container mx-auto px-8 max-w-5xl relative z-10">
       <div className="mb-12">
-        <span className="font-mono text-primary text-xs tracking-widest uppercase">06 //</span>
+        <span className="font-mono text-warning text-xs tracking-widest uppercase">06 //</span>
         <h2 className="text-3xl font-bold text-foreground mt-2">Défis Rencontrés</h2>
         <p className="text-muted-foreground mt-2">Obstacles surmontés durant la mission</p>
       </div>
